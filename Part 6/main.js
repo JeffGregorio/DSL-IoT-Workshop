@@ -40,39 +40,10 @@ function anything() {
 // ======================
 
 function update_idle(key, idx, val, unique) {
-	if (key != '/retrieval')	// Ignore everything except retrievals
-		return;
-	if (val != 1)				// Ignore replacements
-		return;
-	if (idx == 0)				// Retrieval of object 1
-		return 'retrieval1';
-	if (idx == 1)				// Retrieval of object 2
-		return 'retrieval2';
-}
-
-function update_retrieval1(key, idx, val, unique) {	
-	if (key != '/video/object')
-		return;
-	if (sm.conditions[key][0] == 1 & sm.conditions[key][1] == 1)
-		return 'exit';
-	if (idx == 0 & val == 1)
-		return 'idle';
-}	
-
-function update_retrieval2(key, idx, val, unique) {
-	if (key != '/video/object')
-		return;
-	if (sm.conditions[key][0] == 1 & sm.conditions[key][1] == 1)
-		return 'exit';
-	if (idx == 1 & val == 1)
-		return 'idle';
-}
-
-function update_exit(key, idx, val, unique) {
-	if (key != '/video')
-		return;
-	if (idx == 0 & val == 1) {
-		sm.reset();
-		return 'idle';
-	}
+	post("*****************\n");
+	post("key = " + key + "\n");
+	post("idx = " + idx + "\n");
+	post("val = " + val + "\n");
+	post("unique = " + unique + "\n");	
+	post("*****************\n");
 }

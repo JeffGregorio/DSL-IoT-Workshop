@@ -39,6 +39,18 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 949.0, 574.5, 51.0, 22.0 ],
+					"text" : "/test 1 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -608,7 +620,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1150.0, 179.0, 198.375, 22.0 ],
-					"text" : "/audio/score 2 1"
+					"text" : "/audio/voice 2 1"
 				}
 
 			}
@@ -637,7 +649,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 826.0, 102.0, 115.0, 22.0 ],
-					"text" : "/audio/score 1"
+					"text" : "/audio/score 2"
 				}
 
 			}
@@ -920,7 +932,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 56.3125, 357.0, 102.375, 22.0 ],
-					"text" : "idle"
+					"text" : "fin"
 				}
 
 			}
@@ -1318,6 +1330,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-21", 0 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-29", 0 ],
 					"source" : [ "obj-52", 0 ]
 				}
@@ -1503,28 +1522,28 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "main.js",
-				"bootpath" : "~/Make/Workshops/WTiS/Fall 2019/max/Part 6",
+				"bootpath" : "~/Make/Workshops/WTiS/Fall 2019/Part 6",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "videoctrl.js",
-				"bootpath" : "~/Documents/Max 8/Library/jg.iotlib",
-				"patcherrelativepath" : "../../../../../../Documents/Max 8/Library/jg.iotlib",
+				"bootpath" : "~/Documents/Max 8/Library/iotlib",
+				"patcherrelativepath" : "../../../../../Documents/Max 8/Library/iotlib",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "audioctrl.js",
-				"bootpath" : "~/Documents/Max 8/Library/jg.iotlib",
-				"patcherrelativepath" : "../../../../../../Documents/Max 8/Library/jg.iotlib",
+				"bootpath" : "~/Documents/Max 8/Library/iotlib",
+				"patcherrelativepath" : "../../../../../Documents/Max 8/Library/iotlib",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "avroute.js",
-				"bootpath" : "~/Make/Workshops/WTiS/Fall 2019/max/Part 6",
+				"bootpath" : "~/Make/Workshops/WTiS/Fall 2019/Part 6",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
